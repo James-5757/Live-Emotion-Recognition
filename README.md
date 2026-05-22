@@ -165,6 +165,7 @@ The demo uses a trained ResNet-style model to recognise facial expressions from 
 
 ```text
 best_rafdb_resnet_model.keras
+```
 
 ```text
 demo/
@@ -172,7 +173,7 @@ demo/
 ├── renet.ipynb
 └── models/
     └── opencv_face_detector.prototxt
-```text
+```
 
 ---
 

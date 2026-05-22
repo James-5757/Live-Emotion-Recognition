@@ -58,6 +58,9 @@ Recommended project structure:
 
 ```text
 project/
+├── DATASET/
+│   ├── train/
+│   └── test/
 ├── FER/
 │   ├── train/
 │   └── test/
@@ -70,6 +73,8 @@ project/
 │   ├── Pretrained ResNet18.ipynb
 │   └── custom_resnet.ipynb
 ```
+
+In this repository, `FER/` is used for the Basic CNN local workflow, while `DATASET/` is the dataset used by the pretrained ResNet18 notebook and the custom ResNet-style notebook. Those two notebooks were executed on Kaggle, but they correspond to the same RAF-DB style dataset included here under `DATASET/`.
 
 Install dependencies:
 

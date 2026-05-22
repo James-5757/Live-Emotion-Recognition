@@ -16,7 +16,13 @@ This project uses two emotion recognition datasets.
 
 1. **RAF-DB / RAF-DB style dataset**  
    This dataset is mainly used for the ResNet-based models, including the pretrained ResNet18 model and the custom ResNet-style model. These notebooks were run on Kaggle with GPU enabled.
-   Link:https://www.kaggle.com/datasets/shuvoalok/raf-db-dataset
+   Link: https://www.kaggle.com/datasets/shuvoalok/raf-db-dataset
+
+   Kaggle input path used in this project:
+
+   ```text
+   /kaggle/input/datasets/shuvoalok/raf-db-dataset/DATASET
+   ```
 
 2. **Emotion Detection Dataset / FER-style dataset**  
    This dataset is mainly used for the Basic CNN model and local testing. The Basic CNN code is designed to run locally after the dataset path is correctly configured.
@@ -93,20 +99,35 @@ results/
 
 ## 2. Run the Pretrained ResNet18 notebook on Kaggle
 
+This part is the pretrained ResNet18 implementation. It uses transfer learning with an ImageNet-pretrained ResNet18 backbone and fine-tunes the final classifier for 7-class facial emotion recognition on the RAF-DB dataset.
+
 Open:
 
 ```text
 Pretrained ResNet18.ipynb
 ```
 
+Dataset input:
+
+```text
+/kaggle/input/datasets/shuvoalok/raf-db-dataset/DATASET
+```
+
+
 Steps:
 
-1. Upload the notebook to Kaggle.
+1. Upload `Pretrained ResNet18.ipynb` to Kaggle.
 2. Add the RAF-DB dataset as notebook input.
-3. Enable GPU.
-4. Run all cells.
+3. Make sure the dataset path points to:
 
-This notebook automatically searches `/kaggle/input` for a dataset folder containing `train/` and `test/`.
+```python
+RAF_BASIC_DIR = "/kaggle/input/datasets/shuvoalok/raf-db-dataset/DATASET"
+```
+
+4. Enable GPU in Kaggle notebook settings.
+5. Run all cells.
+
+The notebook loads the RAF-DB training and test folders, applies preprocessing and data augmentation, trains the pretrained ResNet18 model, and evaluates the best checkpoint on the independent test set.
 
 Main outputs:
 
@@ -152,6 +173,8 @@ Main outputs:
 best_rafdb_resnet_model.keras
 final_rafdb_resnet_model.keras
 ```
+We will use best_rafdb_resnet_model.keras model as our final deployment to do the test of live emotion judgement.
+Notice: this model is trained by our framework not downloaded from the internet!
 
 ---
 

@@ -62,13 +62,13 @@ project/
 │   ├── train/
 │   └── test/
 ├── code/
+│   ├── data check+basic CNN/
+│   │   ├── 01_check_dataset.py
+│   │   ├── 02_train_model_pytorch.py
+│   │   ├── emotion_common.py
+│   │   └── project_config.py
 │   ├── Pretrained ResNet18.ipynb
-│   ├── custom_resnet.ipynb
-│   └── data check+basic CNN/
-│       ├── 01_check_dataset.py
-│       ├── 02_train_model_pytorch.py
-│       ├── emotion_common.py
-│       └── project_config.py
+│   └── custom_resnet.ipynb
 ```
 
 Install dependencies:

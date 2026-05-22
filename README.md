@@ -1,5 +1,11 @@
 # Emotion Recognition Project
 
+GitHub repository:
+
+```text
+https://github.com/James-5757/Live-Emotion-Recognition
+```
+
 This project contains three emotion-recognition implementations, ordered as follows:
 
 1. **Basic CNN model** (`data check+ basic CNN/`) - run locally
@@ -13,6 +19,13 @@ The models are trained and evaluated on the RAF-DB emotion dataset with 7 classe
 ## Dataset
 
 This project uses two emotion recognition datasets.
+
+For submission and review, both datasets are also included directly in this GitHub repository:
+
+```text
+DATASET/
+FER/
+```
 
 1. **RAF-DB / RAF-DB style dataset**  
    This dataset is mainly used for the ResNet-based models, including the pretrained ResNet18 model and the custom ResNet-style model. These notebooks were run on Kaggle with GPU enabled.

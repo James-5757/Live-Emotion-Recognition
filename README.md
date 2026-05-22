@@ -174,6 +174,7 @@ best_rafdb_resnet_model.keras
 final_rafdb_resnet_model.keras
 ```
 We will use best_rafdb_resnet_model.keras model as our final deployment to do the test of live emotion judgement.
+
 Notice: this model is trained by our framework not downloaded from the internet!
 
 ---

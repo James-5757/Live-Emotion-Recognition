@@ -197,7 +197,7 @@ The uploaded demo files in this repository are:
 
 ```text
 demo_code/
-├── renet.ipynb
+├── resnet.ipynb
 └── models/
     └── opencv_face_detector.prototxt
 ```

@@ -8,9 +8,9 @@ https://github.com/James-5757/Live-Emotion-Recognition
 
 This project contains three emotion-recognition implementations, ordered as follows:
 
-1. **Basic CNN model** (`data check+ basic CNN/`) - run locally
-2. **Pretrained ResNet18 model** (`resnetdipmy.ipynb`) - run on Kaggle
-3. **Custom ResNet-style model** (`resnet.ipynb`) - run on Kaggle
+1. **Basic CNN model** (`code/data check+basic CNN/`) - run locally
+2. **Pretrained ResNet18 model** (`code/Pretrained ResNet18.ipynb`) - run on Kaggle
+3. **Custom ResNet-style model** (`code/custom_resnet.ipynb`) - run on Kaggle
 
 The models are trained and evaluated on the RAF-DB emotion dataset with 7 classes: surprise, fear, disgust, happy, sad, angry, and neutral.
 
@@ -51,22 +51,24 @@ Please make sure the dataset paths are updated correctly before running each not
 Folder:
 
 ```text
-data check+ basic CNN/
+code/data check+basic CNN/
 ```
 
 Recommended project structure:
 
 ```text
 project/
-├── archive/
+├── FER/
 │   ├── train/
 │   └── test/
-├── data check+ basic CNN/
-│   ├── 01_check_dataset.py
-│   ├── 02_train_model_pytorch.py
-│   ├── 03_video_emotion_recognition_pytorch.py
-│   ├── emotion_common.py
-│   └── project_config.py
+├── code/
+│   ├── Pretrained ResNet18.ipynb
+│   ├── custom_resnet.ipynb
+│   └── data check+basic CNN/
+│       ├── 01_check_dataset.py
+│       ├── 02_train_model_pytorch.py
+│       ├── emotion_common.py
+│       └── project_config.py
 ```
 
 Install dependencies:
@@ -78,7 +80,7 @@ pip install torch torchvision opencv-python scikit-learn matplotlib numpy
 Check the dataset:
 
 ```bash
-cd "data check+ basic CNN"
+cd "code/data check+basic CNN"
 python 01_check_dataset.py
 ```
 
@@ -86,18 +88,6 @@ Train the Basic CNN:
 
 ```bash
 python 02_train_model_pytorch.py
-```
-
-Run webcam emotion recognition:
-
-```bash
-python 03_video_emotion_recognition_pytorch.py --source 0 --mirror
-```
-
-Run on a video file:
-
-```bash
-python 03_video_emotion_recognition_pytorch.py --source path/to/video.mp4 --save-output results/output.mp4
 ```
 
 Main outputs:
@@ -117,7 +107,7 @@ This part is the pretrained ResNet18 implementation. It uses transfer learning w
 Open:
 
 ```text
-Pretrained ResNet18.ipynb
+code/Pretrained ResNet18.ipynb
 ```
 
 Dataset input:
@@ -162,7 +152,7 @@ Some warnings may appear when running the same notebook locally in VS Code or Ju
 Open:
 
 ```text
-custom_resnet.ipynb
+code/custom_resnet.ipynb
 ```
 
 Steps:
@@ -196,21 +186,18 @@ Notice: this model is trained by our framework not downloaded from the internet!
 
 ## 4. Demo
 
-A real-time emotion recognition demo is also provided in the `demo/` folder.
+A real-time emotion recognition demo is also provided in the `demo_code/` folder.
 
-The demo uses a trained ResNet-style model to recognise facial expressions from a webcam. It loads the saved model file:
-
-```text
-best_rafdb_resnet_model.keras
-```
+The uploaded demo files in this repository are:
 
 ```text
-demo/
-├── best_rafdb_resnet_model.keras
+demo_code/
 ├── renet.ipynb
 └── models/
     └── opencv_face_detector.prototxt
 ```
+
+If you want to run the demo notebook, make sure the trained model file is available in your runtime environment.
 
 ---
 
